@@ -14,8 +14,8 @@
 <%
 	CallService cs = new CallService();
 	String product1 = cs.getJSON("http://product1:8080");
-	//String json_product2 = cs.getJSON("http://product2:8080");
-	//String json_product3 = cs.getJSON("http://product3:8080");
+	String product2 = cs.getJSON("http://product2:8080");
+	String product3 = cs.getJSON("http://product3:8080");
 
 	JSONParser parser = new JSONParser();
 	Object obj1 = parser.parse(product1);
@@ -25,12 +25,29 @@
 	Long up_product1 = (Long) jsonObj1.get("unitprice");
 	Long ex_product1 = (Long) jsonObj1.get("expense");
 	Long pr_product1 = (Long) jsonObj1.get("price");
+
+	Object obj2 = parser.parse(product2);
+	JSONObject jsonObj2 = (JSONObject) obj2;
+	String nm_product2 = (String) jsonObj2.get("name");
+	Long qn_product2 = (Long) jsonObj2.get("quantity");
+	Long up_product2 = (Long) jsonObj2.get("unitprice");
+	Long ex_product2 = (Long) jsonObj2.get("expense");
+	Long pr_product2 = (Long) jsonObj2.get("price");
 	
-	out.println("name" + nm_product1);
-	out.println("quantity" + qn_product1);
-	out.println("unitprice" + up_product1);
-	out.println("expense" + ex_product1);
-	out.println("price" + pr_product1);
+	Object obj3 = parser.parse(product3);
+	JSONObject jsonObj3 = (JSONObject) obj3;
+	String nm_product3 = (String) jsonObj3.get("name");
+	Long qn_product3 = (Long) jsonObj3.get("quantity");
+	Long up_product3 = (Long) jsonObj3.get("unitprice");
+	Long ex_product3 = (Long) jsonObj3.get("expense");
+	Long pr_product3 = (Long) jsonObj3.get("price");
+	
+	out.println("name" + "quantity" + "unitprice" + "expense" + "price" + "<br>");
+	out.print(nm_product1 + "  " + qn_product1 + "  " + up_product1 + "  " + ex_product1 + "  " + pr_product1 + "<br>");
+	out.print(nm_product2 + "  " + qn_product2 + "  " + up_product2 + "  " + ex_product2 + "  " + pr_product2 + "<br>");
+	out.print(nm_product3 + "  " + qn_product3 + "  " + up_product3 + "  " + ex_product3 + "  " + pr_product3 + "<br>");
+
+	
 %>
 </body>
 </html>
