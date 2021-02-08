@@ -20,32 +20,21 @@
 	JSONParser parser = new JSONParser();
 	Object obj1 = parser.parse(product1);
 	JSONObject jsonObj1 = (JSONObject) obj1;
-	String nm_product1 = (String) jsonObj1.get("name");
-	Long qn_product1 = (Long) jsonObj1.get("quantity");
-	Long up_product1 = (Long) jsonObj1.get("unitprice");
-	Long ex_product1 = (Long) jsonObj1.get("expense");
-	Long pr_product1 = (Long) jsonObj1.get("price");
+	//String nm_product1 = (String) jsonObj1.get("name");
+	//Long qn_product1 = (Long) jsonObj1.get("quantity");
+	//Long up_product1 = (Long) jsonObj1.get("unitprice");
+	//Long ex_product1 = (Long) jsonObj1.get("expense");
+	//Long pr_product1 = (Long) jsonObj1.get("price");
 
 	Object obj2 = parser.parse(product2);
 	JSONObject jsonObj2 = (JSONObject) obj2;
-	String nm_product2 = (String) jsonObj2.get("name");
-	Long qn_product2 = (Long) jsonObj2.get("quantity");
-	Long up_product2 = (Long) jsonObj2.get("unitprice");
-	Long ex_product2 = (Long) jsonObj2.get("expense");
-	Long pr_product2 = (Long) jsonObj2.get("price");
 	
 	Object obj3 = parser.parse(product3);
 	JSONObject jsonObj3 = (JSONObject) obj3;
-	String nm_product3 = (String) jsonObj3.get("name");
-	Long qn_product3 = (Long) jsonObj3.get("quantity");
-	Long up_product3 = (Long) jsonObj3.get("unitprice");
-	Long ex_product3 = (Long) jsonObj3.get("expense");
-	Long pr_product3 = (Long) jsonObj3.get("price");
 	
-	out.println("name" + "quantity" + "unitprice" + "expense" + "price" + "<br>");
-	out.print(nm_product1 + "  " + qn_product1 + "  " + up_product1 + "  " + ex_product1 + "  " + pr_product1 + "<br>");
-	out.print(nm_product2 + "  " + qn_product2 + "  " + up_product2 + "  " + ex_product2 + "  " + pr_product2 + "<br>");
-	out.print(nm_product3 + "  " + qn_product3 + "  " + up_product3 + "  " + ex_product3 + "  " + pr_product3 + "<br>");
+	out.println(jsonObj1.toString());
+	out.println(jsonObj2.toString());
+	out.println(jsonObj3.toString());
 
 	
 %>
