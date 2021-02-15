@@ -14,6 +14,7 @@
 <%
 	CallService cs = new CallService();
 	String product1 = cs.getJSON("http://product1:8080");
+	String product2 = cs.getJSON("http://part1:8080");
 	
 	//String product2 = cs.getJSON("http://product2:8080");
 	//String product3 = cs.getJSON("http://product3:8080");
