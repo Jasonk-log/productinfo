@@ -14,8 +14,9 @@
 <%
 	CallService cs = new CallService();
 	String product1 = cs.getJSON("http://product1:8080");
-	String product2 = cs.getJSON("http://product2:8080");
-	String product3 = cs.getJSON("http://product3:8080");
+	
+	//String product2 = cs.getJSON("http://product2:8080");
+	//String product3 = cs.getJSON("http://product3:8080");
 
 	JSONParser parser = new JSONParser();
 	Object obj1 = parser.parse(product1);
@@ -26,15 +27,15 @@
 	//Long ex_product1 = (Long) jsonObj1.get("expense");
 	//Long pr_product1 = (Long) jsonObj1.get("price");
 
-	Object obj2 = parser.parse(product2);
-	JSONObject jsonObj2 = (JSONObject) obj2;
+	//Object obj2 = parser.parse(product2);
+	//JSONObject jsonObj2 = (JSONObject) obj2;
 	
-	Object obj3 = parser.parse(product3);
-	JSONObject jsonObj3 = (JSONObject) obj3;
+	//Object obj3 = parser.parse(product3);
+	//JSONObject jsonObj3 = (JSONObject) obj3;
 	
 	out.println(jsonObj1.toString());
-	out.println(jsonObj2.toString());
-	out.println(jsonObj3.toString());
+	//out.println(jsonObj2.toString());
+	//out.println(jsonObj3.toString());
 
 	
 %>
